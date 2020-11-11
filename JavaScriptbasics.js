@@ -29,5 +29,5 @@ function createPlayer(firstName, lastName, age, grandSlams){
 let player = new createPlayer('Rafa', 'Nadal', 34, 20);
 console.log(player.firstName); //Rafa
 console.log(player.lastName); //Nadal
-onsole.log(player.age); //34
+console.log(player.age); //34
 console.log(player.grandSlams); //20
