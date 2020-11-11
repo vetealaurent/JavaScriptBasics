@@ -11,3 +11,8 @@ let person = {
     }
     }
 console.log(person.message());
+
+// Add a property to the person object 
+
+person.home = 'Wimbledon';
+console.log(person.home);
