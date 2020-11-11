@@ -16,3 +16,18 @@ console.log(person.message());
 
 person.home = 'Wimbledon';
 console.log(person.home);
+
+//Create objects with a constructor for scalability
+
+function createPlayer(firstName, lastName, age, grandSlams){
+    
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.grandSlams = grandSlams; 
+}
+let player = new createPlayer('Rafa', 'Nadal', 34, 20);
+console.log(player.firstName); //Rafa
+console.log(player.lastName); //Nadal
+onsole.log(player.age); //34
+console.log(player.grandSlams); //20
