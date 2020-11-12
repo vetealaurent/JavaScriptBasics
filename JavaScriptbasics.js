@@ -31,3 +31,15 @@ console.log(player.firstName); //Rafa
 console.log(player.lastName); //Nadal
 console.log(player.age); //34
 console.log(player.grandSlams); //20
+
+//Create a prototype
+
+createPlayer.prototype.country = 'Spain';
+
+let player2 = new createPlayer('David', 'Ferrer', 35, 0);
+console.log(player2); // David, Ferrer, 35, 0, Spain (inherited createPlayer.prototype.country = 'Spain';)
+
+let player3 = new createPlayer('Novak', 'Djokovic', 33, 17);
+console.log(player3); // Novak, Djokovic, 33, 17, Spain (Novak inherited Spain from the prototype but he is not fron there)
+player3.country = 'Serbia'; // Give Novak the country property to override createPlayer.prototype.country = 'Spain';
+console.log(player3);// Novak, Djokovic, 33, 17, Serbia
