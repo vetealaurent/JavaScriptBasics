@@ -43,3 +43,29 @@ let player3 = new createPlayer('Novak', 'Djokovic', 33, 17);
 console.log(player3); // Novak, Djokovic, 33, 17, Spain (Novak inherited Spain from the prototype but he is not fron there)
 player3.country = 'Serbia'; // Give Novak the country property to override createPlayer.prototype.country = 'Spain';
 console.log(player3);// Novak, Djokovic, 33, 17, Serbia
+
+//Arrow functions ES6 Edition
+
+let message = {
+    greetings : ['Hello', 'Bonjour', 'Hola', 'Bom dia'],
+    name : 'World',
+    displayMessage : function(){
+        this.greetings.forEach(function(greeting){
+            console.log(greeting + ' ' + name);
+        });
+    }
+}
+message.displayMessage();// 'Hello World' 'Bonjour World' 'Hola World' Bom dia World'
+
+    // Can also be written with =>
+
+let message = {
+    greetings : ['Hello', 'Bonjour', 'Hola', 'Bom dia'],
+    name : 'World',
+    displayMessage : function() {
+        this.greetings.forEach (greeting => {
+            console.log(greeting + ' ' + this.name);
+        });
+    }
+}
+message.displayMessage();// 'Hello World' 'Bonjour World' 'Hola World' Bom dia World'
